@@ -11,7 +11,7 @@ typedef struct {
 biblioteca;
 
 void listarLivrosEmOrdem(biblioteca livro[]);
-int trocaValores(int ordem[], int cont);
+int trocaValores(int ordem[], int icont, int jcont);
 void listarPrecosEmOrdem(biblioteca livro[]);
 
 int main() {
@@ -23,9 +23,11 @@ int main() {
     {"dracula\0", 150.00},
     {"hamlet\0", 160.20},
     {"biblia\0", 100.30}, };
-    
+
     listarLivrosEmOrdem(livro);
-    
+    printf("\n");
+    listarPrecosEmOrdem(livro);
+
     return 0;
 }
 
@@ -34,14 +36,13 @@ int trocaValores(int ordem[], int icont, int jcont){
     ligacao = ordem[icont];
     ordem[icont] = ordem[jcont];
     ordem[jcont] = ligacao;
-        
+
     return TRUE;
 }
 
 void listarLivrosEmOrdem(biblioteca livro[]){
-    int icont, jcont, kcont, lcont, trocou;
+    int icont, jcont, kcont, lcont, trocou = TRUE;
     int ordem[qtdLivros] = {0, 1, 2, 3, 4, 5, 6};
-    
     for (icont = 0, jcont = 0; icont < qtdLivros - 1 && trocou; icont++){
         trocou = FALSE;
         for (kcont = 0, lcont = 0; kcont < qtdLivros - 1 - icont; kcont++){
@@ -56,25 +57,25 @@ void listarLivrosEmOrdem(biblioteca livro[]){
             lcont = 0;
         }
     }
-    
+
     for (icont = 0; icont < qtdLivros; icont++)
-        printf("%s", livro[ordem[icont]].nome);
-    
+        printf("%s - %.2f\n", livro[ordem[icont]].nome, livro[ordem[icont]].preco);
+
 }
 
 void listarPrecosEmOrdem(biblioteca livro[]){
-    int icont, jcont, trocou;
+    int icont, jcont, trocou = TRUE;
     int ordem[qtdLivros] = {0, 1, 2, 3, 4, 5, 6};
-    
+
     for (icont = 0; icont < qtdLivros - 1 && trocou; icont++){
         trocou = FALSE;
         for (jcont = 0; jcont < qtdLivros - 1 - icont; jcont++){
-            if ((livro[ordem[icont]].preco > livro[ordem[jcont]].preco)
-                trocou = trocaValores(ordem, icont, jcont);
+            if (livro[ordem[jcont]].preco > livro[ordem[jcont + 1]].preco)
+                trocou = trocaValores(ordem, jcont, jcont + 1);
         }
     }
-    
+     
     for (icont = 0; icont < qtdLivros; icont++)
-        printf("%.2f\n", livro[ordem[icont]].preco);
-    
+        printf("%.2f - %s\n", livro[ordem[icont]].preco, livro[ordem[icont]].nome);
+
 }
