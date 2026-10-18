@@ -1,0 +1,17 @@
+.parteCima {
+    background-color: black;
+    padding: 30px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+.tituloPrincipal {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: crimson;
+}
+
+.imgLivros img {
+    margin: 100px 50px 100px 50px;
+}
