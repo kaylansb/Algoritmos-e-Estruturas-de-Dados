@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    background: linear-gradient(130deg, #c9a227, #c8a840, #cfb768);
+    background-attachment: fixed;
+    /* rgb(212, 175, 55) */
+}
+
+/* rgb(201, 162, 39)
+bem forte praticamente marrom - rgb(184, 134, 11)
+beemm clarinho - rgb(230, 200, 110) */
+
+.cabecalho {
+    background: linear-gradient(90deg, #f8e9a3fe 0%,  #ffd502fe 30%, #ffd502fe 70%, #f8e9a3fe 100%);
+    padding: 30px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+}
+
+.cabecalho h1 {
+    font-size: 65px;
+    font-family: 'Pompiere', cursive;
+    letter-spacing: 4px;
+
+    text-align: center;
+    text-shadow: 4px 6px 12px rgba(0, 0, 0, 0.3);
+    color: rgb(94, 36, 105);
+}
+
+.livrosBotoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 55px;
+}
+
+.livros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+}
+
+.livros .info {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #6a026c;
+    margin-top: -10px;
+}
+
+.livros h2 {
+    font-family: 'Cinzel', serif;
+    text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+    color: #6a026c;
+}
+
+.livrosBotoes img {
+    border: 6px solid rgb(94, 36, 105);
+    border-radius: 4px;
+    padding: 6px;
+    background: rgb(255, 255, 152);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.livrosBotoes button {
+    margin: 40px 20px 40px 20px;
+
+    width: 200px;
+    height: 65px;
+    border-radius: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 152);
+    background: linear-gradient(130deg, #6a026c, #900576, #a4069c);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.resultado {
+    background: linear-gradient(130deg, #ffd501, #ffd502fe, #b8860b);
+    border-radius: 100px;
+    margin-top: 50px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.resultado p {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    color: #6a026c;
+}
+
+/* .textParaPag2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    text-shadow: 6px 8px 8px rgba(0, 0, 0, 0.3);
+
+    border: 6px solid rgb(94, 36, 105);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 8px;
+    background: rgb(255, 255, 152);
+    margin: 40px auto 60px auto;
+} */
+
+/* --------------------------------------------------------------------------- */
+/* 
+.botaoVoltar {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 152);
+    background: linear-gradient(130deg, #6a026c, #900576, #a4069c);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+} */
